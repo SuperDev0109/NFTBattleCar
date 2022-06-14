@@ -1,0 +1,56 @@
+.header_section {
+     height: 110px;
+     background-color: #343a40 !important;
+     color: #fff !important;
+     box-shadow: 10px 0px 10px #5a5a5a;
+     transition: .3s ease;
+
+     position: fixed;
+     top: 0;
+     right: 0;
+     left: 0;
+     z-index: 1030;
+}
+
+.header_section .panel {
+     padding: 10px 0;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+}
+
+.header_section .panel .right_box {
+     display: flex;
+     flex-direction: row;
+     gap: 15px;
+     align-items: center;
+}
+
+.header_section .panel .right_box span {
+     background-color: #343a40 !important;
+     color: #fff !important;
+     font-size: 19px;
+}
+
+.header_section .panel .right_box .connectBtn {
+     color: white;
+     background-image: none;
+     background-color: rgb(116, 167, 47);
+     cursor: pointer;
+     font-size: 18px;
+     font-family: "Poppins", sans-serif;
+     text-transform: capitalize;
+     padding: 15px 60px;
+     font-weight: 400;
+     border: 0;
+     border-radius: 5px;
+     position: relative;
+     z-index: 1;
+}
+
+.header_section .panel .right_box .connectBtn:hover {
+     background-color: rgb(77 135 0);
+     transition: 0.5s ease-out;
+}
+

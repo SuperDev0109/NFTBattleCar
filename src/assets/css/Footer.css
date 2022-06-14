@@ -1,0 +1,14 @@
+.footer_section {
+     background-color: #343a40 !important;
+     color: #fff !important;
+     height: 50px;
+}
+
+.footer_section .footerLabel {
+     color: white;
+     font-size: 20px;
+     text-align: center;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
