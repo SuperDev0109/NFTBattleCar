@@ -1,7 +1,15 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect } from 'react'
 import Header from './layout/Header'
+import { useParams } from 'react-router-dom'
 
 export default function Battle() {
+    let { id } = useParams();
+    console.log(id);
+
+    useEffect(() => {
+        
+    }, []);
+
     return (
         <Fragment>
             <Header />
@@ -11,11 +19,11 @@ export default function Battle() {
                         <p className='text-center' style={{ fontSize: '1.5rem', lineHeight: '2rem',fontWeight: '700' }}>YOU</p>
                         <p className='text-center' style={{ fontSize: '1.5rem', lineHeight: '2rem',fontWeight: '700' }}>CRYPTO BUM</p>
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: '1rem' }}>
-                            <img src="assets/img/0-60_0001.0001.jpg" alt="..." width="100%" />
-                            <img src="assets/img/0-60_0001.0001.jpg" alt="..." width="100%" />
-                            <img src="assets/img/0-60_0001.0001.jpg" alt="..." width="100%" />
-                            <img src="assets/img/0-60_0001.0001.jpg" alt="..." width="100%" />
-                            <img src="assets/img/0-60_0001.0001.jpg" alt="..." width="100%" />
+                            <img src="../assets/img/0-60_0001.0001.jpg" alt="..." width="100%" />
+                            <img src="../assets/img/0-60_0001.0001.jpg" alt="..." width="100%" />
+                            <img src="../assets/img/0-60_0001.0001.jpg" alt="..." width="100%" />
+                            <img src="../assets/img/0-60_0001.0001.jpg" alt="..." width="100%" />
+                            <img src="../assets/img/0-60_0001.0001.jpg" alt="..." width="100%" />
                         </div>
                     </div>
                     <div className='col-md-4' style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -34,7 +42,7 @@ export default function Battle() {
                     <div className='col-md-4'>
                         <p className='text-center' style={{ fontSize: '1.5rem', lineHeight: '2rem',fontWeight: '700' }}>OPPONENT</p>
                         <p className='text-center' style={{ fontSize: '1.5rem', lineHeight: '2rem',fontWeight: '700' }}>LUCKY STRIKE</p>
-                        <img src="assets/img/0-60_0001.0001.jpg" alt="..." width="100%" style={{ filter: 'blur(7px)' }} />
+                        <img src="../assets/img/0-60_0001.0001.jpg" alt="..." width="100%" style={{ filter: 'blur(7px)' }} />
                     </div>
                 </div>
                 <div></div>

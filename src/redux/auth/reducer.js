@@ -5,7 +5,8 @@ import {
     USER_LOADED, 
     REGISTER_SUCCESS,
     LOGIN_SUCCESS,
-    LOGOUT
+    LOGOUT,
+    GET_USERS
 } from '../action_types';
 
 const INIT_STATE = {
@@ -15,6 +16,7 @@ const INIT_STATE = {
     user: {
         email: ''
     },
+    users: [],
     error: null,
     address: null,
     networkId: null
@@ -29,6 +31,11 @@ const authReducer = (state = INIT_STATE, action) => {
               isAuthenticated: true,
               loading: false,
               user: payload
+            };
+        case GET_USERS:
+            return {
+                ...state,
+                users: payload
             };
         case REGISTER_SUCCESS:
             return {

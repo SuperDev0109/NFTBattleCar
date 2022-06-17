@@ -8,7 +8,8 @@ import {
     LOGIN_SUCCESS,
     LOGOUT,
     REGISTER_SUCCESS,
-    REGISTER_FAIL
+    REGISTER_FAIL,
+    GET_USERS
   } from '../action_types';
 
 // Load User
@@ -18,6 +19,22 @@ export const loadUser = () => async dispatch => {
 
     dispatch({
       type: USER_LOADED,
+      payload: res.data
+    });
+  } catch (err) {
+    console.log(err);
+    // dispatch({
+    //   type: 'AUTH_ERROR'
+    // });
+  }
+};
+
+export const getUsers = () => async dispatch => {
+  try {
+    const res = await api.get('/auth/getUsers');
+
+    dispatch({
+      type: GET_USERS,
       payload: res.data
     });
   } catch (err) {
